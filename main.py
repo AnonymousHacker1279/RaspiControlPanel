@@ -24,13 +24,13 @@ class RaspiControlPanel(QtWidgets.QWidget, ui.Ui_Form):
 				configFile.close()
 				config.read("config.ini")
 			except:
+				config['general'] = {}
+				config['general']['has_seen_tray_minimize_message'] = 'False'
+
 				config['fanControl'] = {}
 				config['fanControl']['is_active'] = 'False'
 				config['fanControl']['fan_gpio_setup'] = '19'
 				config['fanControl']['fan_temp_threshold'] = '70'
-
-				config['general'] = {}
-				config['general']['has_seen_tray_minimize_message'] = 'False'
 
 				with open('config.ini', 'w') as configFile:
 					config.write(configFile)
