@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="fan_animate">
+    <file>icons/fan.gif</file>
+  </qresource>
+  <qresource prefix="window_icon">
+    <file>icons/window.png</file>
+  </qresource>
+</RCC>
