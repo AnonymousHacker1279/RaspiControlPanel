@@ -4,6 +4,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 import sys
 import platform
+import os
 import psutil
 from subprocess import Popen, PIPE
 import time
@@ -37,7 +38,7 @@ class RaspiControlPanel(QtWidgets.QWidget, ui.Ui_Form):
 					configFile.close()
 		readConfigurationFile()
 
-		fanAnimation = QMovie("icons/fan.gif")
+		fanAnimation = QMovie(resource_path('./assets/fan.gif'))
 		self.fanAnimate.setMovie(fanAnimation)
 		fanAnimation.start()
 
@@ -123,7 +124,7 @@ class RaspiControlPanel(QtWidgets.QWidget, ui.Ui_Form):
 		super(RaspiControlPanel, self).__init__(parent)
 		self.setupUi(self)
 
-		icon = QIcon(QtGui.QPixmap("icons/window.png"))
+		icon = QIcon(QtGui.QPixmap(resource_path("./assets/window.png")))
 		menu = QMenu()
 		showAction = menu.addAction("Show")
 		showAction.triggered.connect(lambda: (self.showNormal(),self.tray.hide(),self.setVisible(True)))
@@ -145,6 +146,12 @@ def main():
 	form = RaspiControlPanel()
 	form.show()
 	app.exec_()
+
+# Translate asset paths to useable format for PyInstaller
+def resource_path(relative_path):
+	if hasattr(sys, '_MEIPASS'):
+		return os.path.join(sys._MEIPASS, relative_path)
+	return os.path.join(os.path.abspath('.'), relative_path)
 
 if __name__ == '__main__':
 	main()

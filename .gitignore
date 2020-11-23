@@ -1,2 +1,8 @@
 __pycache__/
 .vscode/
+build/
+dist/
+target/
+config.ini
+main.spec
+packages/

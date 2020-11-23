@@ -14,8 +14,8 @@
    <string>Raspi Control Panel</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>icons/window.png</normaloff>icons/window.png</iconset>
+   <iconset resource="resource.qrc">
+    <normaloff>:/window_icon/assets/window.png</normaloff>:/window_icon/assets/window.png</iconset>
   </property>
   <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
@@ -119,7 +119,7 @@
       </rect>
      </property>
      <property name="text">
-      <string/>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/fan_animate/assets/fan.gif&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="pixmap">
       <pixmap>icons/fan.gif</pixmap>
@@ -206,8 +206,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>291</width>
-        <height>60</height>
+        <width>96</width>
+        <height>26</height>
        </rect>
       </property>
       <attribute name="label">
@@ -251,8 +251,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>291</width>
-        <height>60</height>
+        <width>96</width>
+        <height>26</height>
        </rect>
       </property>
       <attribute name="label">
