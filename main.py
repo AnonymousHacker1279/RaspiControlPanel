@@ -11,8 +11,10 @@ import time
 import configparser
 
 # Import our files
-import functionHandler
+import fanController
+import overclockHandler
 import ui
+import restartDialog
 
 class RaspiControlPanel(QtWidgets.QWidget, ui.Ui_Form):
 
@@ -54,6 +56,15 @@ class RaspiControlPanel(QtWidgets.QWidget, ui.Ui_Form):
 		self.architectureData.setText(uname.machine)
 		self.hostnameData.setText(uname.node)
 
+		cpufreq = psutil.cpu_freq()
+		self.cpuFreqBox.setValue(cpufreq.max)
+		with open("/boot/config.txt", "r") as bootConfigFile:
+			for num, line in enumerate(bootConfigFile, 0):
+				if "over_voltage=" in line:
+					line = line.lstrip("over_voltage=")
+					line = line.rstrip("\n")
+					self.overvoltBox.setValue(int(line))
+
 		def prepareFanValues(obj, didUpdate):
 			fanMode = self.fanModeActiveButton.isChecked()
 			GPIOSetup = self.fanGPIOBox.value()
@@ -69,8 +80,17 @@ class RaspiControlPanel(QtWidgets.QWidget, ui.Ui_Form):
 					config.write(configFile)
 					configFile.close()
 
-			functionHandler.applyNewFanValues(obj, fanMode, GPIOSetup, tempThreshold)
+			fanController.applyNewFanValues(obj, fanMode, GPIOSetup, tempThreshold)
 		self.fanControlApply.clicked.connect(lambda: prepareFanValues(self, True))
+
+		def prepareOverclockValues(obj):
+			freqValue = self.cpuFreqBox.value()
+			overvoltValue = self.overvoltBox.value()
+
+			overclockHandler.applyOverclock(obj, freqValue, overvoltValue)
+			restartDialog = RestartDialog()
+			restartDialog.show()
+		self.overclockApply.clicked.connect(lambda: prepareOverclockValues(self))
 
 
 		# If configuration data exists, send the data to any functions that need it
@@ -109,7 +129,7 @@ class RaspiControlPanel(QtWidgets.QWidget, ui.Ui_Form):
 
 	def closeEvent(self, event):
 		global app
-		functionHandler.exit_handler()
+		fanController.exit_handler()
 		self.close()
 		app.exit()
 		
@@ -129,7 +149,7 @@ class RaspiControlPanel(QtWidgets.QWidget, ui.Ui_Form):
 		showAction = menu.addAction("Show")
 		showAction.triggered.connect(lambda: (self.showNormal(),self.tray.hide(),self.setVisible(True)))
 		exitAction = menu.addAction("Exit")
-		exitAction.triggered.connect(lambda: (functionHandler.exit_handler(), self.close(), app.exit()))
+		exitAction.triggered.connect(lambda: (fanController.exit_handler(), self.close(), app.exit()))
 		self.tray = QSystemTrayIcon()
 		self.tray.setIcon(icon)
 		self.tray.setContextMenu(menu)
@@ -139,10 +159,28 @@ class RaspiControlPanel(QtWidgets.QWidget, ui.Ui_Form):
 		self.center()
 		self.run()
 
+class RestartDialog(QtWidgets.QWidget, restartDialog.Ui_Dialog):
+	def __init__(self, parent=None):
+		super(RestartDialog, self).__init__(parent)
+		self.setupUi(self)
+		self.center()
+		self.run()
+
+	def center(self):
+		qr = self.frameGeometry()
+		cp = QDesktopWidget().availableGeometry().center()
+		qr.moveCenter(cp)
+		self.move(qr.topLeft())
+	
+	def run(self):
+		self.restartLater.clicked.connect(lambda: self.hide())
+		self.restartNow.clicked.connect(lambda: os.system("sudo reboot"))
+
 def main():
 	global app
 	app = QApplication(sys.argv)
 	app.setQuitOnLastWindowClosed(False)
+	app.setStyle("Fusion")
 	form = RaspiControlPanel()
 	form.show()
 	app.exec_()

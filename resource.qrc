@@ -2,6 +2,9 @@
   <qresource prefix="fan_animate">
     <file>assets/fan.gif</file>
   </qresource>
+  <qresource prefix="overclocking">
+    <file>assets/overclock.png</file>
+  </qresource>
   <qresource prefix="window_icon">
     <file>assets/window.png</file>
   </qresource>

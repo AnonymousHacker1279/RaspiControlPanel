@@ -206,8 +206,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>96</width>
-        <height>26</height>
+        <width>100</width>
+        <height>30</height>
        </rect>
       </property>
       <attribute name="label">
@@ -251,8 +251,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>96</width>
-        <height>26</height>
+        <width>100</width>
+        <height>30</height>
        </rect>
       </property>
       <attribute name="label">
@@ -335,6 +335,120 @@
      </layout>
     </widget>
    </widget>
+   <widget class="QWidget" name="overclocking">
+    <attribute name="title">
+     <string>Overclocking</string>
+    </attribute>
+    <widget class="QLabel" name="overclockingIcon">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>101</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/overclocking/assets/overclock.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="overclockingLabel">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>0</y>
+       <width>291</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Overclocking is a way to get more performance out of your device without upgrading the hardware. However, there is the possibility of your device crashing or randomly rebooting if you select an unstable overclock. Modify this at your own risk!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="cpuFreqBox">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>120</y>
+       <width>121</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="suffix">
+      <string> MHz</string>
+     </property>
+     <property name="prefix">
+      <string/>
+     </property>
+     <property name="minimum">
+      <number>900</number>
+     </property>
+     <property name="maximum">
+      <number>2500</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="overclockingLabel_2">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>120</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>CPU Frequency</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="overvoltBox">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>170</y>
+       <width>121</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="suffix">
+      <string> x0.025v</string>
+     </property>
+     <property name="prefix">
+      <string>+</string>
+     </property>
+     <property name="maximum">
+      <number>6</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="overclockingLabel_3">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>170</y>
+       <width>241</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>CPU/GPU Overvolt Level</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="overclockApply">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>230</y>
+       <width>96</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Apply</string>
+     </property>
+    </widget>
+   </widget>
    <widget class="QWidget" name="about">
     <attribute name="title">
      <string>About</string>
@@ -349,7 +463,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Raspi Control Panel&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Written by AnonymousHacker1279&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;https://titan-mk4.dynv6.net&quot;&gt;&lt;span style=&quot; font-weight:600; color:#000000;text-decoration:none;&quot;&gt;A basic tool to control specific features on your Raspberry Pi. Designed from the ground up in Python and PyQt5.&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;https://github.com/AnonymousHacker1279&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;GitHub&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;https://github.com/AnonymousHacker1279&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#000000;&quot;&gt;, &lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;https://titan-mk4.dynv6.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;My Website&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Raspi Control Panel - v0.2.0&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Written by AnonymousHacker1279&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;https://titan-mk4.dynv6.net&quot;&gt;&lt;span style=&quot; font-weight:600; color:#000000;&quot;&gt;A basic tool to control specific features on your Raspberry Pi. Designed from the ground up in Python and PyQt5.&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;https://github.com/AnonymousHacker1279&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;GitHub&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;https://github.com/AnonymousHacker1279&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#000000;&quot;&gt;, &lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;https://titan-mk4.dynv6.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;My Website&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>
