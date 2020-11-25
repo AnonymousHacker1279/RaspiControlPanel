@@ -11,19 +11,19 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(343, 128)
+        Dialog.resize(360, 153)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/window_icon/assets/window.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Dialog.setWindowIcon(icon)
         self.restartLater = QtWidgets.QPushButton(Dialog)
-        self.restartLater.setGeometry(QtCore.QRect(225, 100, 111, 29))
+        self.restartLater.setGeometry(QtCore.QRect(230, 110, 111, 29))
         self.restartLater.setAutoDefault(False)
         self.restartLater.setObjectName("restartLater")
         self.restartNow = QtWidgets.QPushButton(Dialog)
-        self.restartNow.setGeometry(QtCore.QRect(110, 100, 111, 29))
+        self.restartNow.setGeometry(QtCore.QRect(110, 110, 111, 29))
         self.restartNow.setObjectName("restartNow")
         self.label = QtWidgets.QLabel(Dialog)
-        self.label.setGeometry(QtCore.QRect(0, 0, 341, 91))
+        self.label.setGeometry(QtCore.QRect(10, 0, 341, 91))
         self.label.setWordWrap(True)
         self.label.setObjectName("label")
 

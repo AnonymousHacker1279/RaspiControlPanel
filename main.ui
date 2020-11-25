@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>401</width>
-    <height>300</height>
+    <width>482</width>
+    <height>382</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,12 +22,12 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>401</width>
-     <height>301</height>
+     <width>481</width>
+     <height>391</height>
     </rect>
    </property>
    <property name="toolTip">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Raspberry Pi Configuration&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string/>
    </property>
    <property name="currentIndex">
     <number>0</number>
@@ -41,8 +41,8 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>401</width>
-       <height>261</height>
+       <width>471</width>
+       <height>341</height>
       </rect>
      </property>
      <layout class="QFormLayout" name="formLayout">
@@ -133,8 +133,8 @@
       <rect>
        <x>100</x>
        <y>0</y>
-       <width>291</width>
-       <height>171</height>
+       <width>371</width>
+       <height>201</height>
       </rect>
      </property>
      <property name="currentIndex">
@@ -145,8 +145,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>291</width>
-        <height>60</height>
+        <width>371</width>
+        <height>90</height>
        </rect>
       </property>
       <attribute name="label">
@@ -189,7 +189,7 @@
         <rect>
          <x>10</x>
          <y>30</y>
-         <width>271</width>
+         <width>361</width>
          <height>23</height>
         </rect>
        </property>
@@ -206,8 +206,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>100</width>
-        <height>30</height>
+        <width>371</width>
+        <height>90</height>
        </rect>
       </property>
       <attribute name="label">
@@ -234,12 +234,12 @@
         <rect>
          <x>70</x>
          <y>10</y>
-         <width>211</width>
+         <width>291</width>
          <height>41</height>
         </rect>
        </property>
        <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;GPIO fan pin - recommended to set this value to 19&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;GPIO fan pin - default is 19&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="wordWrap">
         <bool>true</bool>
@@ -251,8 +251,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>100</width>
-        <height>30</height>
+        <width>371</width>
+        <height>90</height>
        </rect>
       </property>
       <attribute name="label">
@@ -279,7 +279,7 @@
         <rect>
          <x>60</x>
          <y>10</y>
-         <width>221</width>
+         <width>301</width>
          <height>41</height>
         </rect>
        </property>
@@ -295,8 +295,8 @@
     <widget class="QPushButton" name="fanControlApply">
      <property name="geometry">
       <rect>
-       <x>300</x>
-       <y>230</y>
+       <x>380</x>
+       <y>310</y>
        <width>96</width>
        <height>29</height>
       </rect>
@@ -312,7 +312,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>210</y>
+       <y>290</y>
        <width>291</width>
        <height>52</height>
       </rect>
@@ -357,8 +357,8 @@
       <rect>
        <x>100</x>
        <y>0</y>
-       <width>291</width>
-       <height>111</height>
+       <width>371</width>
+       <height>131</height>
       </rect>
      </property>
      <property name="text">
@@ -372,7 +372,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>120</y>
+       <y>140</y>
        <width>121</width>
        <height>37</height>
       </rect>
@@ -394,8 +394,8 @@
      <property name="geometry">
       <rect>
        <x>150</x>
-       <y>120</y>
-       <width>231</width>
+       <y>140</y>
+       <width>311</width>
        <height>31</height>
       </rect>
      </property>
@@ -407,7 +407,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>170</y>
+       <y>190</y>
        <width>121</width>
        <height>37</height>
       </rect>
@@ -426,8 +426,8 @@
      <property name="geometry">
       <rect>
        <x>150</x>
-       <y>170</y>
-       <width>241</width>
+       <y>190</y>
+       <width>311</width>
        <height>41</height>
       </rect>
      </property>
@@ -438,8 +438,8 @@
     <widget class="QPushButton" name="overclockApply">
      <property name="geometry">
       <rect>
-       <x>300</x>
-       <y>230</y>
+       <x>380</x>
+       <y>310</y>
        <width>96</width>
        <height>29</height>
       </rect>
@@ -458,12 +458,12 @@
       <rect>
        <x>10</x>
        <y>0</y>
-       <width>381</width>
-       <height>261</height>
+       <width>461</width>
+       <height>341</height>
       </rect>
      </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Raspi Control Panel - v0.2.0&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Written by AnonymousHacker1279&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;https://titan-mk4.dynv6.net&quot;&gt;&lt;span style=&quot; font-weight:600; color:#000000;&quot;&gt;A basic tool to control specific features on your Raspberry Pi. Designed from the ground up in Python and PyQt5.&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;https://github.com/AnonymousHacker1279&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;GitHub&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;https://github.com/AnonymousHacker1279&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#000000;&quot;&gt;, &lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;https://titan-mk4.dynv6.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;My Website&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Raspi Control Panel - v0.2.1&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Written by AnonymousHacker1279&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;https://titan-mk4.dynv6.net&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#000000;&quot;&gt;A basic tool to control specific features on your Raspberry Pi. Designed from the ground up in Python and PyQt5.&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;https://github.com/AnonymousHacker1279&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;GitHub&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;https://github.com/AnonymousHacker1279&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#000000;&quot;&gt;, &lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;https://titan-mk4.dynv6.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;My Website&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>
